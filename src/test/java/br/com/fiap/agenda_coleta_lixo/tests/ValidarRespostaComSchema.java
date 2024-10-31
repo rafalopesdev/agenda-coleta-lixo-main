@@ -9,7 +9,7 @@ public class ValidarRespostaComSchema {
     @Test
     public void validarRespostaDeRegistroComSchema() {
         Response response = given()
-                .get("/api/lixo") // Altere o endpoint conforme necessário
+                .get("/api/lixo")
                 .then()
                 .assertThat()
                 .statusCode(200)
@@ -19,6 +19,6 @@ public class ValidarRespostaComSchema {
                 .response();
 
         // Outras validações adicionais, se necessário
-        response.then().body("tipo", equalTo("Orgânico")); // Exemplo de verificação de campo
+        response.then().body("tipo", equalTo("Orgânico"));
     }
 }

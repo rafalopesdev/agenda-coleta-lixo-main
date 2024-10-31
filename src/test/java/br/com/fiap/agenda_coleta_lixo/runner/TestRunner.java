@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"br.com.fiap.agenda_coleta_lixo.steps", "br.com.fiap.agenda_coleta_lixo.config"},
-        plugin = {"html:target/cucumber-reports/report.html"} // Modifique para um arquivo específico
+        plugin = {"html:target/cucumber-reports/report.html"}
 )
 public class TestRunner {
 }
