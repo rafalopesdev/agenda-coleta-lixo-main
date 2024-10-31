@@ -1,0 +1,14 @@
+# Ignora diretórios de build e arquivos temporários
+/target/
+/build/
+.idea/
+*.iml
+
+# Ignora arquivos de sistema do macOS
+.DS_Store
+
+# Ignora arquivos de logs
+*.log
+
+# Ignora arquivos de cache
+.cache/
