@@ -47,12 +47,22 @@ No terminal, dentro da pasta do projeto, execute o comando:
 
 ## **Executando a API**
 Para iniciar a API, execute o comando abaixo no terminal (ou rode diretamente pela IDE):
+
+Direto no arquivo:
+
+src/main/java/br.com.fiap.agenda_coleta_lixo.AgendaColetaLixoApplication
+Ou
 ./mvnw spring-boot:run
 
 A API estará disponível em http://localhost:8080/api/lixo
 
 ## **Rodando os Testes Automatizados**
+Direto no arquivo:
+
+src/test/java/br/com/fiap/agenda_coleta_lixo/GerenciarAgendaColetaLixoTest.java
+
 Usando o Maven
+
 ./mvnw test
 
 Usando o Script de Testes
