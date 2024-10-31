@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - main  # Executa o pipeline em cada commit na branch main.
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        echo "Instalando o Java"
+        sudo apt-get update
+        sudo apt-get install -y openjdk-11-jdk # Modifique para a versão do Java que você está usando
+        java -version  # Verifica a versão do Java instalado
+
+  - script: |
+      echo "Instalando dependências"
+      mvn install -DskipTests=true
+    displayName: 'Instalar dependências'
+
+  - script: |
+      echo "Executando testes"
+      mvn test
+    displayName: 'Executar Testes'
