@@ -51,7 +51,9 @@ Para iniciar a API, execute o comando abaixo no terminal (ou rode diretamente pe
 Direto no arquivo:
 
 src/main/java/br.com.fiap.agenda_coleta_lixo.AgendaColetaLixoApplication
+
 Ou
+
 ./mvnw spring-boot:run
 
 A API estará disponível em http://localhost:8080/api/lixo
