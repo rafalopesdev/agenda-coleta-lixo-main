@@ -5,17 +5,17 @@ Este projeto é uma API para gerenciar a agenda de coleta de lixo, desenvolvida 
 ## **Pré-requisitos**
 Para rodar este projeto, você precisa das seguintes ferramentas:
 
-Java: Java 21 (ou versão compatível)
+**Java:** Java 21 (ou versão compatível)
 
-MongoDB: A API utiliza MongoDB Atlas para armazenar dados
+**MongoDB:** A API utiliza MongoDB Atlas para armazenar dados
 
-Git: Para clonar o projeto do GitHub
+**Git:** Para clonar o projeto do GitHub
 
-IntelliJ IDEA (ou outra IDE Java): Para abrir e executar o projeto
+**IntelliJ IDE:** Para abrir e executar o projeto
 
-Docker (opcional): Caso deseje rodar a aplicação em containers
+**Docker (opcional):** Caso deseje rodar a aplicação em containers
 
-Permissões para o Maven Wrapper: É necessário dar permissão de execução ao Maven Wrapper antes de rodar o projeto com o comando:
+**Permissões para o Maven Wrapper:** É necessário dar permissão de execução ao Maven Wrapper antes de rodar o projeto com o comando:
 
 chmod +x mvnw
 
@@ -41,35 +41,41 @@ DELETE /api/lixo/{id}: Exclui um registro de coleta pelo ID.
 git clone https://github.com/rafalopesdev/agenda-coleta-lixo-main.git
 
 ## **Construção do Projeto**
-No terminal, dentro da pasta do projeto, execute o comando:
+**No terminal, dentro da pasta do projeto, execute o comando:**
 
 ./mvnw clean install
 
 ## **Executando a API**
 Para iniciar a API, execute o comando abaixo no terminal (ou rode diretamente pela IDE):
 
-Direto no arquivo:
+**Direto no arquivo:**
 
 src/main/java/br.com.fiap.agenda_coleta_lixo.AgendaColetaLixoApplication
 
-Ou
+**Ou**
 
 ./mvnw spring-boot:run
 
 A API estará disponível em http://localhost:8080/api/lixo
 
 ## **Rodando os Testes Automatizados**
-Direto no arquivo:
+**Direto no arquivo:**
 
 src/test/java/br/com/fiap/agenda_coleta_lixo/GerenciarAgendaColetaLixoTest.java
 
-Usando o Maven
+**Usando o Maven**
 
 ./mvnw test
 
 Usando o Script de Testes
-Permissão: chmod +x run_tests.sh
-Executar: ./run_tests.sh
+
+**Permissão:** 
+
+chmod +x run_tests.sh
+
+**Executar:** 
+
+./run_tests.sh
 
 
 
