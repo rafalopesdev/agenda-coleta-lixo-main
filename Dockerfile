@@ -1,14 +1,29 @@
-# Use uma imagem do OpenJDK como base
-FROM openjdk:17-jdk-alpine
+FROM maven:3.8.5-openjdk-17 AS build
 
-# Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia o arquivo JAR gerado para dentro do container
-COPY target/agenda-coleta-lixo-0.0.1-SNAPSHOT.jar app.jar
+COPY . .
 
-# Comando para rodar a aplicação
+# Compile e empacote o projeto
+RUN mvn clean package
+
+# Criar uma imagem
+FROM openjdk:17-jdk-slim
+
+# Definir o diretório
+WORKDIR /app
+
+COPY --from=build /app/target/agenda-coleta-lixo-0.0.1-SNAPSHOT.jar app.jar
+
+# Rodar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-# Expõe a porta 8080
-EXPOSE 8080
+
+# Dockerfile
+
+FROM openjdk:21
+WORKDIR /app
+COPY target/agenda-coleta-lixo-0.0.1-SNAPSHOT.jar app.jar
+
+# Comando para rodar os testes
+CMD ["java", "-jar", "app.jar", "&&", "mvn", "test"]

@@ -1,4 +1,0 @@
-br/com/fiap/agenda_coleta_lixo/runner/TestRunner.class
-br/com/fiap/agenda_coleta_lixo/config/CucumberSpringConfiguration.class
-br/com/fiap/agenda_coleta_lixo/GerenciarAgendaColetaLixoTest.class
-br/com/fiap/agenda_coleta_lixo/steps/GerenciarAgendaColetaLixoSteps.class

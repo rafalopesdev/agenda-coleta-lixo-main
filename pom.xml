@@ -83,7 +83,7 @@
 			<version>7.18.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- Dependência do JUnit 5 para executar a suite de testes -->
+		<!-- JUnit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -107,6 +107,14 @@
 			<version>7.18.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!--JSON Schema -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>5.5.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

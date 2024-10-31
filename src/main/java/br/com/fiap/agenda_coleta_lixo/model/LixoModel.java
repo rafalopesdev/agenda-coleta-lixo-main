@@ -8,8 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "agenda-coleta-lixo")
 public class LixoModel {
     @Id
-    private String id; // Anotação para indicar que este é o campo de ID
-
+    private String id;
     private String tipo;
     private String dia;
     private String horario;

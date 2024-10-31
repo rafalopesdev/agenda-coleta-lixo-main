@@ -6,10 +6,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "pretty",
+                "json:target/cucumber-reports/report.json",
+                "html:target/cucumber-reports/report.html"
+        },
         features = "src/test/resources/features",
-        glue = {"br.com.fiap.agenda_coleta_lixo.steps", "br.com.fiap.agenda_coleta_lixo.config"}, // Incluindo o pacote de steps e configuração
-        plugin = {"pretty", "html:target/cucumber-reports"}
+        glue = "br.com.fiap.agenda_coleta_lixo"
 )
 public class GerenciarAgendaColetaLixoTest {
 }
+
+
 

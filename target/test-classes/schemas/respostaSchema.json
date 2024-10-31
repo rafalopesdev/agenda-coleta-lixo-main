@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "tipo": { "type": "string" },
+    "dia": { "type": "string", "format": "date" },
+    "horario": { "type": "string" },
+    "endereco": { "type": "string" }
+  },
+  "required": ["tipo", "dia", "horario", "endereco"]
+}
