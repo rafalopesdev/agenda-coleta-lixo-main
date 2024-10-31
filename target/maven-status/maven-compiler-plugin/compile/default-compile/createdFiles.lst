@@ -1,0 +1,5 @@
+br/com/fiap/agenda_coleta_lixo/controller/LixoController.class
+br/com/fiap/agenda_coleta_lixo/model/LixoModel.class
+br/com/fiap/agenda_coleta_lixo/repository/LixoRepository.class
+br/com/fiap/agenda_coleta_lixo/AgendaColetaLixoApplication.class
+br/com/fiap/agenda_coleta_lixo/service/LixoService.class
