@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
   branches:
     include:
@@ -12,10 +7,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: UseJava@1
+  - task: Bash@3
     inputs:
-      versionSpec: '11' # ou a versão do Java que você está usando
-      jdkArchitecture: 'x64'
+      targetType: 'inline'
+      script: |
+        echo "Instalando o Java"
+        sudo apt-get update
+        sudo apt-get install -y openjdk-11-jdk # Modifique para a versão do Java que você está usando
+        java -version  # Verifica a versão do Java instalado
 
   - script: |
       echo "Instalando dependências"
@@ -26,4 +25,3 @@ steps:
       echo "Executando testes"
       mvn test
     displayName: 'Executar Testes'
-
